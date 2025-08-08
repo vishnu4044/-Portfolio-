@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vishnu Sai Bhonsley – AI/ML Engineer</title>
+  <meta name="description" content="Portfolio of Vishnu Sai Bhonsley – AI/ML Developer specializing Full‑stack Application Development.">
+  <meta name="theme-color" content="#0b0f14">
+  <meta property="og:title" content="Vishnu Sai Bhonsley – AI/ML Engineer">
+  <meta property="og:description" content="I build AI products that actually ship.">
+  <meta property="og:type" content="website">
+  <style>
+    :root{
+      --bg:#0b0f14; --panel:#0f1620; --ink:#eaf2fb; --muted:#98a6b7; --line:#1f2a37;
+      --accent:#60a5fa; --accent2:#22d3ee;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;height:100%;background:var(--bg);color:var(--ink);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif}
+    a{color:var(--accent);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:1080px;margin:0 auto;padding:24px}
+    header{display:flex;gap:16px;align-items:center;justify-content:space-between;flex-wrap:wrap}
+    .brand{display:flex;gap:12px;align-items:center}
+    .avatar{width:48px;height:48px;border-radius:50%;
+      background: conic-gradient(from 180deg at 50% 50%, var(--accent), var(--accent2));
+      display:grid;place-items:center;color:#07121d;font-weight:900}
+    nav a{margin:0 8px;color:var(--muted);font-weight:600}
+    nav a:hover{color:var(--ink)}
+    .grid{display:grid;gap:16px}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:center;margin-top:14px}
+    @media (max-width:900px){.hero{grid-template-columns:1fr}}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;
+      box-shadow:0 10px 30px rgba(0,0,0,.25)}
+    .title{font-size:40px;line-height:1.1;margin:0 0 8px;font-weight:900}
+    .subtitle{color:var(--muted);margin:0 0 14px}
+    .chips{display:flex;gap:10px;flex-wrap:wrap}
+    .chip{background:#0b1320;border:1px solid #223043;color:#cfe7ff;padding:8px 12px;border-radius:999px;font-size:14px}
+    .btn{display:inline-block;padding:12px 14px;border-radius:12px;border:1px solid #2a394b;background:#0f1a25;color:var(--ink);font-weight:800}
+    .btn.primary{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#07121d;border:none}
+    h2{margin:26px 0 10px;font-size:26px}
+    .list{margin:8px 0 0 18px}
+    footer{opacity:.8;text-align:center;padding:40px 0}
+    .section{margin-top:26px}
+
+    /* Tasteful motion (respect reduced-motion) */
+    @media (prefers-reduced-motion: no-preference){
+      .reveal{opacity:0; transform: translateY(12px); transition: opacity .5s ease, transform .5s ease}
+      .reveal.in{opacity:1; transform:none}
+      .card:hover{transform: translateY(-2px); box-shadow:0 16px 40px rgba(0,0,0,.35)}
+      .bgfx{animation:float 18s ease-in-out infinite alternate}
+      @keyframes float{0%{transform:translateY(0)}100%{transform:translateY(-18px)}}
+    }
+
+    /* Animated gradient backdrop */
+    .bgfx{position:fixed;inset:-20% -10%;z-index:-1;filter:blur(60px);opacity:.45;
+      background:
+        radial-gradient(40% 40% at 20% 20%, #22d3ee55, transparent 60%),
+        radial-gradient(40% 40% at 80% 30%, #3b82f655, transparent 60%),
+        radial-gradient(40% 40% at 60% 80%, #a78bfa55, transparent 60%);
+    }
+  </style>
+</head>
+<body>
+  <div class="bgfx" aria-hidden="true"></div>
+
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="avatar">VB</div>
+        <div>
+          <div style="font-weight:900">Vishnu Sai Bhonsley</div>
+          <div style="color:var(--muted);font-size:14px"> AI/ML Developer specializing Full‑stack Application Development</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#publications">Publications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card reveal">
+        <h1 class="title">I Build AI that works in the Real World not just in lab</h1>
+        <p class="subtitle">AI Developer based in Carrollton, TX. Specializing Full‑stack Application Developmen</p>
+        <div class="chips">
+          <span class="chip">Python</span>
+          <span class="chip">Flak</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">Django</span>
+          <span class="chip">C#</span>
+          <span class="chip">ASP.NET</span>
+        </div>
+        <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
+          <a class="btn" href="https://www.linkedin.com/in/vishnu4420" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/vishnu4044" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+      <div class="card reveal">
+        <h2>Core tech</h2>
+        <p><span class="chip">RAG</span> <span class="chip">LLM</span> <span class="chip">vectorDB</span>  <br> <br><span class="chip">Agentic AI </span><span class="chip">Docker</span> <span class="chip">GCP/AWS/Azure </span> <br> <br><span class="chip">SQL/NoSQL</span> <span class="chip">Nginx</span></p>
+        <p class="subtitle" style="margin-top:12px">Also experienced with React, Spring Boot, Kafka, Hadoop, Power BI, UiPath.</p>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Experience</h2>
+      <div class="grid">
+        <div class="card reveal">
+          <h3>AI Developer – SSKG (CobbleStone Software)</h3>
+          <div class="subtitle">Remote, TX • May 2025 – Present</div>
+          <ul class="list">
+            <li>Developed a secure REST API in ASP.NET Core to handle Word document uploads with JWT authentication, chunking content into
+              100-word segments and delegating embedding generation to a FastAPI microservice. Stored embeddings in PostgreSQL using
+              batch operations, powering the backend of a Retrieval-Augmented Generation (RAG) AI system.</li><BR>
+            <li> Built a RAG-based search API that asynchronously converts user queries into embeddings using a FastAPI microservice, performs
+              optimized vector similarity search on document embeddings stored in PostgreSQL, and sends the most relevant context along
+              with the query to an LLM to generate accurate, context-aware responses.</li><BR>
+            <li> Led the development of an AI-powered chatbot using ASP.NET that enables natural language queries over PostgreSQL by
+              leveraging a multi-agent system to interpret user input, generate dynamic SQL, and invoke stored procedures via MCP . Retrieved
+              data is combined with the original query and sent to an LLM to generate accurate, optimized responses. Implemented database
+              query optimization to enhance performance and supporting autoscaling for high-concurrency workloads.</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Software Engineer (AI/ML) – Terralogic Solutions Inc.</h3>
+          <div class="subtitle">Carrollton, TX • Sep 2024 – Mar 2025</div>
+          <ul class="list">
+            <li>Designed, developed, and deployed a self-serve AI chatbot platform using LangChain, LangGraph, and Flask, enabling users to
+              create customized chatbots for their websites in under 10 minutes by providing a URL and response prompts. Integrated OpenAI,
+              Gemini, and Claude LLMs for real-time interactions across 20+ client sites. Implemented secure authentication with hashed
+              passwords, built a conversation report feature for analytics, and deployed the solution using Docker, NGINX (load balancing), and
+              GCP/in-house servers, ensuring scalability and reliability via persistent connection polling.
+              </li><br>
+            <li>Developed an AI-powered log analysis system for Cisco using LangChain to process and convert application and platform logs into
+              JSON, then store them in a Neo4j knowledge graph. Enabled natural language querying to extract relevant hardware details,
+              identify errors, and reference user manuals—automating troubleshooting and improving anomaly detection efficiency while
+              reducing manual effort.</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>AI Automation Developer (RPA) – GMU Fiscal Services</h3>
+          <div class="subtitle">Fairfax, VA • Aug 2023 – May 2024</div>
+          <ul class="list">
+            <li>Developed and deployed an end-to-end OCR pipeline using EasyOCR and OpenCV, implementing advanced image preprocessing
+              techniques to denoise, crop, and prepare scanned images for accurate text extraction. Integrated a custom Dolly v2-based LLM to
+              automate data interpretation and reduce dependency on UiPath AI agents, significantly improving the efficiency of document
+              processing workflows.</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Research Engineering – Academic Programs International</h3>
+          <div class="subtitle">Austin, TX • May 2023 – Aug 2023</div>
+          <ul class="list">
+            <li>Designed and developed a full-stack web application to automate academic course data extraction from multiple university
+              websites, using Flask-based microservices and a React frontend for real-time data interaction. Integrated MySQL for structured
+              data storage and optimized scraping workflows with Selenium and BeautifulSoup4. Deployed the system on AWS with robust
+              error handling and logging to ensure high reliability, scalability, and maintainability.</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Software Development Engineer – Data Poem</h3>
+          <div class="subtitle">Bangalore, India • Dec 2021 – Jun 2022</div>
+          <ul class="list">
+            <li>Designed and implemented secure, scalable Django RESTful API pipelines with OAuth 2.0 and RBAC, enabling seamless
+              third-party integration with social media platforms. Optimized database queries to improve response times and automated
+              analytics/reporting workflows to enhance operational efficiency.</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>Software Engineer – Fi Ellements</h3>
+          <div class="subtitle">Gurgaon, India • Jul 2021 – Nov 2021</div>
+          <ul class="list">
+            <li>Developed a Python script to migrate structured SQL data to NoSQL databases, enhancing data retrieval speed and system
+              interoperability. Refactored legacy code and built asynchronous workflows using Celery and Redis, while improving database
+              performance through advanced indexing—boosting overall platform scalability.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="grid">
+        <div class="card reveal">
+          <h3>George Mason University — M.S. in Computer Science</h3>
+          <div class="subtitle">Fairfax, VA • Aug 2022 – Dec 2024</div>
+          <ul class="list">
+          </ul>
+        </div>
+        <div class="card reveal">
+          <h3>REVA University — B.E. in Computer Science</h3>
+          <div class="subtitle">Bengaluru, India • Aug 2018 – May 2022</div>
+          <ul class="list">
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="section">
+      <h2>Publications</h2>
+      <div class="card reveal">
+        <ul class="list">
+          <li>Voice Assistance with Face Authentication – River Publishers (Jan 2023)</li>
+          <li>AKIRA – A Voice‑based Virtual Assistant with Authentication – Springer (Aug 2021)</li>
+          <li>Ambulance booking system using GPS – AIP Publishing (Aug 2022)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <h2>Skills</h2>
+      <div class="grid">
+        <div class="card reveal">
+          <h3>Languages</h3>
+          <p>Python, JavaScript, C, C++, C#, Java, HTML, CSS, SQL, NoSQL</p>
+        </div>
+        <div class="card reveal">
+          <h3>Frameworks & Software Tools</h3>
+          <p>Nodejs, React, Django, Flask,Spring boot,Langchain,LangGraph</p>
+        </div>
+        <div class="card reveal">
+          <h3>Machine Learning expertise</h3>
+          <p>Pandas, SciPy, Keras, sklearn, PyTorch, TensorFlow, PySpark, Kafka, Hadoop</p>
+        </div>
+        <div class="card reveal">
+          <h3>DevOps & Cloud</h3>
+          <p>Google Cloud Platform (GCP), AWS (S3, Redshift), Azure,Ansible,Nginx, Docker</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <div class="card reveal">
+        <p><strong>Location:</strong> Carrollton, TX</p>
+        <p><strong>Email:</strong> <a href="mailto:Vishnu.bhonsley@gmail.com">Vishnu.bhonsley@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vishnu4420" target="_blank" rel="noopener">linkedin.com/in/vishnu4420</a></p>
+        <p><strong>GitHub:</strong> <a href="https://github.com/vishnu4044" target="_blank" rel="noopener">github.com/vishnu4420</a></p>
+      </div>
+    </section>
+
+    <footer>© <span id="y"></span> Vishnu Sai Bhonsley — Built with plain HTML/CSS and shipped via GitHub Pages.</footer>
+  </div>
+
+  <script>
+    // Set year
+    document.getElementById('y').textContent=new Date().getFullYear();
+
+    // Intersection Observer reveal
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if(!reduce){
+      const obs = new IntersectionObserver((entries)=>{
+        entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
+      },{threshold:0.12});
+      document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+    }
+  </script>
+</body>
+</html>
