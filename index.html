@@ -4,10 +4,10 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vishnu Sai Bhonsley – AI/ML Engineer</title>
-  <meta name="description" content="Portfolio of Vishnu Sai Bhonsley – AI/ML Developer specializing Full‑stack Application Development.">
+  <meta name="description" content="Portfolio of Vishnu Sai Bhonsley – AI/ML Developer specializing in Full-stack Application Development.">
   <meta name="theme-color" content="#0b0f14">
   <meta property="og:title" content="Vishnu Sai Bhonsley – AI/ML Engineer">
-  <meta property="og:description" content="I build AI products that actually ship.">
+  <meta property="og:description" content="From prototype to production—AI that delivers.">
   <meta property="og:type" content="website">
   <style>
     :root{
@@ -31,7 +31,7 @@
     .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;align-items:center;margin-top:14px}
     @media (max-width:900px){.hero{grid-template-columns:1fr}}
     .card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:20px;
-      box-shadow:0 10px 30px rgba(0,0,0,.25)}
+      box-shadow:0 10px 30px rgba(0,0,0,.25); transform:translateZ(0); will-change:transform}
     .title{font-size:40px;line-height:1.1;margin:0 0 8px;font-weight:900}
     .subtitle{color:var(--muted);margin:0 0 14px}
     .chips{display:flex;gap:10px;flex-wrap:wrap}
@@ -59,6 +59,20 @@
         radial-gradient(40% 40% at 80% 30%, #3b82f655, transparent 60%),
         radial-gradient(40% 40% at 60% 80%, #a78bfa55, transparent 60%);
     }
+
+    /* Projects filter buttons */
+    .filterbar{display:flex;gap:8px;flex-wrap:wrap;margin:8px 0 2px}
+    .filterbtn{border:1px solid #263241;background:#0d1520;color:#cfe7ff;padding:8px 12px;border-radius:999px;font-size:13px;cursor:pointer}
+    .filterbtn[aria-pressed="true"]{background:linear-gradient(135deg,var(--accent2),var(--accent));color:#09121b;border:none}
+
+    /* Accordion for details */
+    details{border:1px solid var(--line);border-radius:12px;padding:12px;background:#0d1520}
+    details+details{margin-top:10px}
+    summary{cursor:pointer;list-style:none;font-weight:700}
+    summary::-webkit-details-marker{display:none}
+
+    /* Back-to-top */
+    #topbtn{position:fixed;right:18px;bottom:18px;z-index:50;border-radius:999px}
   </style>
 </head>
 <body>
@@ -70,12 +84,13 @@
         <div class="avatar">VB</div>
         <div>
           <div style="font-weight:900">Vishnu Sai Bhonsley</div>
-          <div style="color:var(--muted);font-size:14px"> AI/ML Developer specializing Full‑stack Application Development</div>
+          <div style="color:var(--muted);font-size:14px">AI/ML Developer • Full-stack Application Development</div>
         </div>
       </div>
       <nav>
         <a href="#experience">Experience</a>
         <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
         <a href="#skills">Skills</a>
         <a href="#education">Education</a>
         <a href="#publications">Publications</a>
@@ -84,25 +99,30 @@
     </header>
 
     <section class="hero">
-      <div class="card reveal">
-        <h1 class="title">I Build AI that works in the Real World not just in lab</h1>
-        <p class="subtitle">AI Developer based in Carrollton, TX. Specializing Full‑stack Application Developmen</p>
+      <div class="card reveal" data-tilt>
+        <h1 class="title">From prototype to production—AI that delivers.</h1>
+        <p class="subtitle">AI Developer based in Carrollton, TX. Specializing in full-stack application development, chatbots, RAG, and scalable deployments.</p>
         <div class="chips">
           <span class="chip">Python</span>
-          <span class="chip">Flak</span>
+          <span class="chip">Flask</span>
           <span class="chip">FastAPI</span>
           <span class="chip">Django</span>
           <span class="chip">C#</span>
           <span class="chip">ASP.NET</span>
         </div>
         <div style="margin-top:16px;display:flex;gap:10px;flex-wrap:wrap">
-          <a class="btn" href="https://www.linkedin.com/in/vishnu4420" target="_blank" rel="noopener">LinkedIn</a>
-          <a class="btn" href="https://github.com/vishnu4044" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn primary" href="#contact">Hire me</a>
+          <a class="btn" href="https://www.linkedin.com/in/vishnu4420/" target="_blank" rel="noopener">LinkedIn</a>
+          <a class="btn" href="https://github.com/vishnu4420" target="_blank" rel="noopener">GitHub</a>
         </div>
       </div>
       <div class="card reveal">
         <h2>Core tech</h2>
-        <p><span class="chip">RAG</span> <span class="chip">LLM</span> <span class="chip">vectorDB</span>  <br> <br><span class="chip">Agentic AI </span><span class="chip">Docker</span> <span class="chip">GCP/AWS/Azure </span> <br> <br><span class="chip">SQL/NoSQL</span> <span class="chip">Nginx</span></p>
+        <p>
+          <span class="chip">RAG</span> <span class="chip">LLM</span> <span class="chip">Vector DB</span>
+          <br><br><span class="chip">Agentic AI</span> <span class="chip">Docker</span> <span class="chip">GCP/AWS/Azure</span>
+          <br><br><span class="chip">SQL/NoSQL</span> <span class="chip">Nginx</span>
+        </p>
         <p class="subtitle" style="margin-top:12px">Also experienced with React, Spring Boot, Kafka, Hadoop, Power BI, UiPath.</p>
       </div>
     </section>
@@ -111,39 +131,43 @@
       <h2>Experience</h2>
       <div class="grid">
         <div class="card reveal">
-          <h3>AI Developer CobbleStone Software</h3>
+          <h3>AI Developer — CobbleStone Software (SSKG)</h3>
           <div class="subtitle">Remote, TX • May 2025 – Present</div>
           <ul class="list">
-            <li>Developed a secure REST API in ASP.NET Core to handle Word document uploads with JWT authentication, chunking content into
+            <li>
+              Developed a secure REST API in ASP.NET Core to handle Word document uploads with JWT authentication, chunking content into
               100-word segments and delegating embedding generation to a FastAPI microservice. Stored embeddings in PostgreSQL using
-              batch operations, powering the backend of a Retrieval-Augmented Generation (RAG) AI system.</li><BR>
-            <li> Built a RAG-based search API that asynchronously converts user queries into embeddings using a FastAPI microservice, performs
+              batch operations, powering the backend of a Retrieval-Augmented Generation (RAG) AI system.</li>
+              <li>
+              Built a RAG-based search API that asynchronously converts user queries into embeddings using a FastAPI microservice, performs
               optimized vector similarity search on document embeddings stored in PostgreSQL, and sends the most relevant context along
-              with the query to an LLM to generate accurate, context-aware responses.</li><BR>
-            <li> Led the development of an AI-powered chatbot using ASP.NET that enables natural language queries over PostgreSQL by
+              with the query to an LLM to generate accurate, context-aware responses.</li>
+            <li>
+              Led the development of an AI-powered chatbot using ASP.NET that enables natural language queries over PostgreSQL by
               leveraging a multi-agent system to interpret user input, generate dynamic SQL, and invoke stored procedures via MCP . Retrieved
               data is combined with the original query and sent to an LLM to generate accurate, optimized responses. Implemented database
               query optimization to enhance performance and supporting autoscaling for high-concurrency workloads.</li>
           </ul>
         </div>
         <div class="card reveal">
-          <h3>Software Engineer (AI/ML) – Terralogic Solutions Inc.</h3>
+          <h3>Software Engineer (AI/ML) — Terralogic Solutions Inc.</h3>
           <div class="subtitle">Carrollton, TX • Sep 2024 – Mar 2025</div>
           <ul class="list">
-            <li>Designed, developed, and deployed a self-serve AI chatbot platform using LangChain, LangGraph, and Flask, enabling users to
+            <li>
+              Designed, developed, and deployed a self-serve AI chatbot platform using LangChain, LangGraph, and Flask, enabling users to
               create customized chatbots for their websites in under 10 minutes by providing a URL and response prompts. Integrated OpenAI,
               Gemini, and Claude LLMs for real-time interactions across 20+ client sites. Implemented secure authentication with hashed
               passwords, built a conversation report feature for analytics, and deployed the solution using Docker, NGINX (load balancing), and
-              GCP/in-house servers, ensuring scalability and reliability via persistent connection polling.
-              </li><br>
-            <li>Developed an AI-powered log analysis system for Cisco using LangChain to process and convert application and platform logs into
+              GCP/in-house servers, ensuring scalability and reliability via persistent connection polling.</li>
+            <li>
+              Developed an AI-powered log analysis system for Cisco using LangChain to process and convert application and platform logs into
               JSON, then store them in a Neo4j knowledge graph. Enabled natural language querying to extract relevant hardware details,
               identify errors, and reference user manuals—automating troubleshooting and improving anomaly detection efficiency while
               reducing manual effort.</li>
           </ul>
         </div>
         <div class="card reveal">
-          <h3>AI Automation Developer (RPA) – GMU Fiscal Services</h3>
+          <h3>AI Automation Developer (RPA) — GMU Fiscal Services</h3>
           <div class="subtitle">Fairfax, VA • Aug 2023 – May 2024</div>
           <ul class="list">
             <li>Developed and deployed an end-to-end OCR pipeline using EasyOCR and OpenCV, implementing advanced image preprocessing
@@ -153,7 +177,7 @@
           </ul>
         </div>
         <div class="card reveal">
-          <h3>Research Engineering – Academic Programs International</h3>
+          <h3>Research Engineering — Academic Programs International</h3>
           <div class="subtitle">Austin, TX • May 2023 – Aug 2023</div>
           <ul class="list">
             <li>Designed and developed a full-stack web application to automate academic course data extraction from multiple university
@@ -163,8 +187,8 @@
           </ul>
         </div>
         <div class="card reveal">
-          <h3>Software Development Engineer – Data Poem</h3>
-          <div class="subtitle">Bangalore, India • Dec 2021 – Jun 2022</div>
+          <h3>Software Development Engineer — Data Poem</h3>
+          <div class="subtitle">Bangalore, IN • Dec 2021 – Jun 2022</div>
           <ul class="list">
             <li>Designed and implemented secure, scalable Django RESTful API pipelines with OAuth 2.0 and RBAC, enabling seamless
               third-party integration with social media platforms. Optimized database queries to improve response times and automated
@@ -172,8 +196,8 @@
           </ul>
         </div>
         <div class="card reveal">
-          <h3>Software Engineer – Fi Ellements</h3>
-          <div class="subtitle">Gurgaon, India • Jul 2021 – Nov 2021</div>
+          <h3>Software Engineer — Fi Ellements</h3>
+          <div class="subtitle">Gurgaon, IN • Jul 2021 – Nov 2021</div>
           <ul class="list">
             <li>Developed a Python script to migrate structured SQL data to NoSQL databases, enhancing data retrieval speed and system
               interoperability. Refactored legacy code and built asynchronous workflows using Celery and Redis, while improving database
@@ -182,20 +206,103 @@
         </div>
       </div>
     </section>
+
+    <!-- PROJECTS with TAG FILTER + DETAILS -->
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="card reveal">
+        <div class="filterbar" role="toolbar" aria-label="Project filter">
+          <button class="filterbtn" data-tag="all" aria-pressed="true">All</button>
+          <button class="filterbtn" data-tag="chatbot">Chatbots</button>
+          <button class="filterbtn" data-tag="ocr">OCR</button>
+          <button class="filterbtn" data-tag="vision">Computer Vision</button>
+          <button class="filterbtn" data-tag="medical">Medical</button>
+        </div>
+        <div class="grid" id="projectGrid" style="margin-top:8px">
+          <!-- AKIRA -->
+          <article class="card reveal" data-tags="chatbot vision">
+            <h3>AKIRA — The Next Level Voice Assistant (Copyrighted)</h3>
+            <div class="subtitle">NLP • LSTM • OpenCV</div>
+            <details>
+              <summary>Overview</summary>
+              <ul class="list">
+                <li>The chapter delves into the history and advancements of voice-based virtual assistants, highlighting their shift from personal secretaries to intelligent personal assistants. It examines popular virtual assistants like Alexa, Siri, Google Assistant, and Cortana, comparing their features and security vulnerabilities. The main focus is the introduction of AKIRA, a secure voice-based virtual assistant that categorizes commands into 'permission-less' and 'permissioned' to ensure user authentication and data security. The chapter also discusses the future scope of AI-based voice assistants, emphasizing the need for improved accuracy and security features.</li>
+              </ul>
+            </details>
+            <div style="margin-top:10px">
+              <a class="btn" href="https://www.springerprofessional.de/en/akira-a-voice-based-virtual-assistant-with-authentication/19535114" target="_blank" rel="noopener">Springer</a>
+            </div>
+          </article>
+
+          <!-- Epileptic Seizure Classification -->
+          <article class="card reveal" data-tags="medical vision">
+            <h3>Classification of Epileptic Seizures</h3>
+            <div class="subtitle">YOLO • Medical Imaging</div>
+            <details>
+              <summary>Overview</summary>
+              <ul class="list">
+                <li>This project focuses on the classification of epileptic seizures in children using a combination of OpenCV, Machine Learning (ML), Pandas, and Matplotlib libraries in Python. The primary objectives were to build a YOLO (Recurrent Neural Network) model for diagnosing seizure events, analyze datasets containing over 10,000 patient EEG readings, and enhance patient care by reducing misclassifications through ML approaches.</li> <br>
+
+              <li>Project Highlights :</li>
+              <br>
+              <li>Developed a YOLO (RNN) Model for Seizure Detection: Achieved a high accuracy rate of 85% in diagnosing seizure events in children.</li>
+              <li>Data Analysis with Python Libraries: Utilized Matplotlib and OpenCV for analyzing datasets comprising over 10,000 patient EEG readings.</li>
+              <li>Improved Patient Care: Employed ML and Python approaches to enhance medical assistance.</li>
+              <li>Resulted in a 30% decrease in misclassifications, leading to more accurate diagnosis and treatment.</li>
+              </ul>
+            </details>
+            <div style="margin-top:10px">
+              <a class="btn" href="https://github.com/vishnu4044/Classification-of-epileptic-seizures" target="_blank" rel="noopener">Github</a>
+            </div>
+          </article>
+
+          <!-- Readox-text-translater -->
+          <article class="card reveal" data-tags="ocr">
+            <h3>Readox-text-translater-</h3>
+            <div class="subtitle">EasyOCR • OpenCV • Dolly v2</div>
+            <details>
+              <summary>Overview</summary>
+              <ul class="list">
+                <li>Readox is an accessibility-focused web application designed to help visually impaired individuals, illiterate communities, regional-medium students, senior citizens, and travelers overcome reading and language barriers. It translates text from PDF, Word documents, and images into a user’s preferred language, providing the output as a document (DOCX) or audio (MP3). The app also supports real-time text translation between any languages, making it useful for cross-lingual communication.</li><br>
+                <li>Readox is a versatile tool that empowers individuals with limited reading ability or language familiarity to access, understand, and interact with written content. By combining translation, document conversion, and speech output, it removes significant barriers to information and communication.
+                </li>
+              </ul>
+            </details>
+            <div style="margin-top:10px">
+              <a class="btn" href="https://github.com/vishnu4044/Readox-text-translater-" target="_blank" rel="noopener">Github</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements" class="section">
+      <h2>Achievements</h2>
+      <div class="card reveal">
+        <details open>
+          <summary>Highlights</summary>
+          <ul class="list">
+            <li>3rd Place — Deloitte GMU Startup Event (2024)</li>
+            <li>1st Place — App Development Hackathon (2020)</li>
+            <li>1st Place — Solution Challenge Hackathon (2021)</li>
+            <li>8th — REVA Hack (7,000 participants)</li>
+            <li>15th — Google COD Hackathon (26,000 participants, 2020)</li>
+          </ul>
+        </details>
+      </div>
+    </section>
+
     <section id="education" class="section">
       <h2>Education</h2>
       <div class="grid">
         <div class="card reveal">
           <h3>George Mason University — M.S. in Computer Science</h3>
           <div class="subtitle">Fairfax, VA • Aug 2022 – Dec 2024</div>
-          <ul class="list">
-          </ul>
         </div>
         <div class="card reveal">
           <h3>REVA University — B.E. in Computer Science</h3>
           <div class="subtitle">Bengaluru, India • Aug 2018 – May 2022</div>
-          <ul class="list">
-          </ul>
         </div>
       </div>
     </section>
@@ -204,9 +311,9 @@
       <h2>Publications</h2>
       <div class="card reveal">
         <ul class="list">
-          <li>Voice Assistance with Face Authentication – River Publishers (Jan 2023)</li>
-          <li>AKIRA – A Voice‑based Virtual Assistant with Authentication – Springer (Aug 2021)</li>
-          <li>Ambulance booking system using GPS – AIP Publishing (Aug 2022)</li>
+          <li><a href="https://www.riverpublishers.com/research_article_details.php?book_id=1038&cid=22" target="_blank" rel="noopener">Voice Assistance with Face Authentication — River Publishers (Jan 2023)</a></li>
+          <li><a href="https://www.springerprofessional.de/en/akira-a-voice-based-virtual-assistant-with-authentication/19535114" target="_blank" rel="noopener">AKIRA — Springer (Aug 2021)</a></li>
+          <li><a href="https://pubs.aip.org/aip/acp/article-abstract/2461/1/020003/2824973/Ambulance-booking-system-using-GPS?redirectedFrom=fulltext" target="_blank" rel="noopener">Ambulance booking system using GPS — AIP (Aug 2022)</a></li>
         </ul>
       </div>
     </section>
@@ -220,15 +327,15 @@
         </div>
         <div class="card reveal">
           <h3>Frameworks & Software Tools</h3>
-          <p>Nodejs, React, Django, Flask,Spring boot,Langchain,LangGraph</p>
+          <p>Node.js, React, Django, Flask, Spring Boot, LangChain, LangGraph</p>
         </div>
         <div class="card reveal">
-          <h3>Machine Learning expertise</h3>
-          <p>Pandas, SciPy, Keras, sklearn, PyTorch, TensorFlow, PySpark, Kafka, Hadoop</p>
+          <h3>Machine Learning</h3>
+          <p>Pandas, SciPy, Keras, scikit-learn, PyTorch, TensorFlow, PySpark, Kafka, Hadoop</p>
         </div>
         <div class="card reveal">
           <h3>DevOps & Cloud</h3>
-          <p>Google Cloud Platform (GCP), AWS (S3, Redshift), Azure,Ansible,Nginx, Docker</p>
+          <p>GCP, AWS (S3, Redshift), Azure, Ansible, Nginx, Docker</p>
         </div>
       </div>
     </section>
@@ -237,7 +344,7 @@
       <h2>Contact</h2>
       <div class="card reveal">
         <p><strong>Location:</strong> Carrollton, TX</p>
-        <p><strong>Email:</strong> <a href="mailto:Vishnu.bhonsley@gmail.com">Vishnu.bhonsley@gmail.com</a></p>
+        <p><strong>Email:</strong> <a id="email" href="mailto:Vishnu.bhonsley@gmail.com">Vishnu.bhonsley@gmail.com</a> <button class="btn" id="copyBtn" style="margin-left:8px">Copy</button></p>
         <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/vishnu4420" target="_blank" rel="noopener">linkedin.com/in/vishnu4420</a></p>
         <p><strong>GitHub:</strong> <a href="https://github.com/vishnu4044" target="_blank" rel="noopener">github.com/vishnu4420</a></p>
       </div>
@@ -246,9 +353,11 @@
     <footer>© <span id="y"></span> Vishnu Sai Bhonsley — Built with plain HTML/CSS and shipped via GitHub Pages.</footer>
   </div>
 
+  <a id="topbtn" class="btn" href="#">↑ Top</a>
+
   <script>
     // Set year
-    document.getElementById('y').textContent=new Date().getFullYear();
+    document.getElementById('y').textContent = new Date().getFullYear();
 
     // Intersection Observer reveal
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -257,6 +366,39 @@
         entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); } });
       },{threshold:0.12});
       document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+    }
+
+    // Project tag filtering
+    const btns = Array.from(document.querySelectorAll('.filterbtn'));
+    const cards = Array.from(document.querySelectorAll('#projectGrid [data-tags]'));
+    btns.forEach(b=>b.addEventListener('click',()=>{
+      btns.forEach(x=>x.setAttribute('aria-pressed','false'));
+      b.setAttribute('aria-pressed','true');
+      const tag = b.dataset.tag;
+      cards.forEach(c=>{
+        if(tag==='all' || c.dataset.tags.includes(tag)){ c.style.display='block'; }
+        else{ c.style.display='none'; }
+      });
+    }));
+
+    // Copy email
+    document.getElementById('copyBtn').addEventListener('click', async ()=>{
+      try{
+        await navigator.clipboard.writeText('Vishnu.bhonsley@gmail.com');
+        const old = copyBtn.textContent; copyBtn.textContent='Copied!'; setTimeout(()=>copyBtn.textContent=old,1200);
+      }catch(e){ alert('Copy failed'); }
+    });
+
+    // Subtle tilt on hero card
+    const tiltEl = document.querySelector('[data-tilt]');
+    if(tiltEl && !reduce){
+      tiltEl.addEventListener('mousemove', (e)=>{
+        const r = tiltEl.getBoundingClientRect();
+        const x = (e.clientX - r.left) / r.width - 0.5;
+        const y = (e.clientY - r.top) / r.height - 0.5;
+        tiltEl.style.transform = `rotateX(${(-y*4).toFixed(2)}deg) rotateY(${(x*6).toFixed(2)}deg) translateY(-2px)`;
+      });
+      tiltEl.addEventListener('mouseleave', ()=> tiltEl.style.transform='translateY(-2px)');
     }
   </script>
 </body>
